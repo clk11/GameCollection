@@ -1,0 +1,66 @@
+# ASP.NET Core
+## Binaries and output files
+bin/
+obj/
+
+## NuGet Packages
+*.nuget.props
+*.nuget.targets
+**/*.lock.json
+project.lock.json
+artifacts/
+*_ReSharper*
+*.dotCover
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+wwwroot/
+
+## Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+## Test Results
+TestResults/
+
+## StyleCop
+StyleCopReport.xml
+
+## Resharper specific
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+## Roslyn analysis rulesets
+*.ruleset
+*.DotSettings
+
+## EditorConfig
+.editorconfig
+
+## Others
+Thumbs.db
+*.dbmdl
+*.pfx
+*.sdf
+*.sln.ide
+*.sln.iml
+*.ipch/
+*.sln.dotSettings.user
+
+# Environment-based settings
+# Exclude sensitive information like credentials or connection strings
+appsettings.Development.json
+appsettings.Production.json
+
+# Visual Studio files
+.vs/
+*.vscode/
+
