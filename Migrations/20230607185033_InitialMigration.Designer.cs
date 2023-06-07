@@ -10,13 +10,33 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MvcVideoGame.Migrations
 {
     [DbContext(typeof(MvcVideoGameContext))]
-    [Migration("20230603082530_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230607185033_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
+
+            modelBuilder.Entity("MvcVideoGame.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Review");
+                });
 
             modelBuilder.Entity("MvcVideoGame.Models.VideoGame", b =>
                 {

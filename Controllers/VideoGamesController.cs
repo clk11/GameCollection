@@ -39,13 +39,17 @@ namespace MvcVideoGame.Controllers
             {
                 return NotFound();
             }
-
-            return View(videoGame);
+            var reviews = await _context.Review.ToListAsync();
+            return View((videoGame, reviews));
         }
-
-        public IActionResult Create()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task CreateReview([Bind("Id,Username,Message,Date")] Review review)
         {
-            return View();
+            _context.Review.Add(review);
+            await _context.SaveChangesAsync();
+
+            // No explicit return statement needed
         }
 
         [HttpPost]

@@ -1,7 +1,8 @@
-@model MvcVideoGame.Models.VideoGame
+@model (MvcVideoGame.Models.VideoGame,List<MvcVideoGame.Models.Review>)
 
 @{
     ViewData["Title"] = "Details";
+    var id = Model.Item1.Id;
 }
 
 <h1>Details</h1>
@@ -10,51 +11,85 @@
     <h4>VideoGame</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.Title)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Title)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ReleaseDate)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.ReleaseDate)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ReleaseDate)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.ReleaseDate)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Genre)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.Genre)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Genre)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Genre)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Platform)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.Platform)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Platform)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Platform)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Developer)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.Developer)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Developer)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Developer)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Multiplayer)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.Multiplayer)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Multiplayer)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Multiplayer)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1.Price)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Price)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+<hr />
+<h2 style="padding-top:20px">Add a review </h2>
+<hr />
+<div style="padding-top: 20px;">
+    <div class="form-box">
+        <div class="form-group" style="padding-bottom: 20px;">
+            <label for="username" style="font-weight: bold;">Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username">
+        </div>
+        <div class="form-group" style="padding-bottom: 20px;">
+            <label for="message" style="font-weight: bold;">Message:</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button asp-action="CreateReview" type="button" class="btn btn-primary">Send</button>
+    </div>
+</div>
+<hr />
+<h1 style="padding:20px; text-align: center; font-weight: bold; margin-bottom: 30px;">Reviews</h1>
+<table class="table table-bordered">
+    <tbody>
+        @foreach (var item in Model.Item2)
+        {
+            <tr>
+                <td style="border: 2px solid; padding: 20px;">
+                    <h5 class="card-title">@item.Username</h5>
+                    <p class="card-text">@item.Message</p>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
