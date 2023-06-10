@@ -31,7 +31,12 @@ namespace MvcVideoGame.Migrations
                     b.Property<string>("Username")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("VideoGameId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("VideoGameId");
 
                     b.ToTable("Review");
                 });
@@ -66,6 +71,22 @@ namespace MvcVideoGame.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("VideoGame");
+                });
+
+            modelBuilder.Entity("MvcVideoGame.Models.Review", b =>
+                {
+                    b.HasOne("MvcVideoGame.Models.VideoGame", "VideoGame")
+                        .WithMany("Reviews")
+                        .HasForeignKey("VideoGameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("VideoGame");
+                });
+
+            modelBuilder.Entity("MvcVideoGame.Models.VideoGame", b =>
+                {
+                    b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MvcVideoGame.Models;
 
 public class MvcVideoGameContext : DbContext
 {
@@ -7,6 +8,6 @@ public class MvcVideoGameContext : DbContext
     {
     }
 
-    public DbSet<MvcVideoGame.Models.VideoGame> VideoGame { get; set; }
-    public DbSet<MvcVideoGame.Models.Review> Review { get; set; }
+    public DbSet<VideoGame> VideoGame { get; set; }
+    public DbSet<Review> Review { get; set; }
 }

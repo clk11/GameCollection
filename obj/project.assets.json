@@ -10339,11 +10339,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/robert/departajare/MvcVideoGame/MvcVideoGame.csproj",
+      "projectUniqueName": "/home/robert/departajare/GameCollection/MvcVideoGame.csproj",
       "projectName": "MvcVideoGame",
-      "projectPath": "/home/robert/departajare/MvcVideoGame/MvcVideoGame.csproj",
+      "projectPath": "/home/robert/departajare/GameCollection/MvcVideoGame.csproj",
       "packagesPath": "/home/robert/.nuget/packages/",
-      "outputPath": "/home/robert/departajare/MvcVideoGame/obj/",
+      "outputPath": "/home/robert/departajare/GameCollection/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/robert/.nuget/NuGet/NuGet.Config"

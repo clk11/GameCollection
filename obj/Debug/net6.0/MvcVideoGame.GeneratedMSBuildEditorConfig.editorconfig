@@ -8,57 +8,57 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcVideoGame
 build_property.RootNamespace = MvcVideoGame
-build_property.ProjectDir = /home/robert/departajare/MvcVideoGame/
+build_property.ProjectDir = /home/robert/departajare/GameCollection/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/robert/departajare/MvcVideoGame
+build_property.MSBuildProjectDirectory = /home/robert/departajare/GameCollection
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/robert/departajare/MvcVideoGame/Views/Home/Index.cshtml]
+[/home/robert/departajare/GameCollection/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/Home/Privacy.cshtml]
+[/home/robert/departajare/GameCollection/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/Shared/Error.cshtml]
+[/home/robert/departajare/GameCollection/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/robert/departajare/GameCollection/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/VideoGames/Create.cshtml]
+[/home/robert/departajare/GameCollection/Views/VideoGames/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlkZW9HYW1lcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/VideoGames/Delete.cshtml]
+[/home/robert/departajare/GameCollection/Views/VideoGames/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlkZW9HYW1lcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/VideoGames/Details.cshtml]
+[/home/robert/departajare/GameCollection/Views/VideoGames/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlkZW9HYW1lcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/VideoGames/Edit.cshtml]
+[/home/robert/departajare/GameCollection/Views/VideoGames/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlkZW9HYW1lcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/VideoGames/Index.cshtml]
+[/home/robert/departajare/GameCollection/Views/VideoGames/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlkZW9HYW1lcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/_ViewImports.cshtml]
+[/home/robert/departajare/GameCollection/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/_ViewStart.cshtml]
+[/home/robert/departajare/GameCollection/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/robert/departajare/MvcVideoGame/Views/Shared/_Layout.cshtml]
+[/home/robert/departajare/GameCollection/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-cl16hxmv0s

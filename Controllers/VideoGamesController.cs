@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcVideoGame.Models;
 using Pagination;
@@ -33,23 +28,20 @@ namespace MvcVideoGame.Controllers
                 return NotFound();
             }
 
-            var videoGame = await _context.VideoGame
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var videoGame = _context.VideoGame.Include(v => v.Reviews).FirstOrDefault(x=>x.Id == id);
             if (videoGame == null)
-            {
                 return NotFound();
-            }
-            var reviews = await _context.Review.ToListAsync();
-            return View((videoGame, reviews));
+            return View(videoGame);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task CreateReview([Bind("Id,Username,Message,Date")] Review review)
+        public async Task<IActionResult> CreateReview(int id, [Bind("Id,Username,Message,Date")] Review review)
         {
-            _context.Review.Add(review);
+            review.Date = DateTime.Now;
+            review.VideoGameId = id;
+            _context.Add(review);
             await _context.SaveChangesAsync();
-
-            // No explicit return statement needed
+            return RedirectToAction("Details", new { id });
         }
 
         [HttpPost]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KWF5Ui0Ka3AOKGtjQJts6vMEZkTV+m7pa1Bq1sUls4yo/q9sX2ITpcdgfe4vIvE2cSgB2E+kU4mrOaSoYCov/w==",
+  "dgSpecHash": "aYP1VvHI+dwXdxJHYa/ZRv8GqYJjFDD6kb0869GoyU0ZDVnANd4GY8y5iIEKN8P7ZZELAWtsFRLmhfR+kSIOTA==",
   "success": true,
-  "projectFilePath": "/home/robert/departajare/MvcVideoGame/MvcVideoGame.csproj",
+  "projectFilePath": "/home/robert/departajare/GameCollection/MvcVideoGame.csproj",
   "expectedPackageFiles": [
     "/home/robert/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/robert/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

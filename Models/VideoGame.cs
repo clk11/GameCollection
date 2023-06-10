@@ -14,5 +14,7 @@ namespace MvcVideoGame.Models
         public string? Developer { get; set; }
         public bool Multiplayer { get; set; }
         public decimal Price { get; set; }
+        public ICollection<Review> Reviews { get; set; }
+
     }
 }
