@@ -41,7 +41,8 @@ namespace MvcVideoGame.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Details", new { id });
         }
-        public async Task<IActionResult> Create(){
+        public async Task<IActionResult> Create()
+        {
             return View();
         }
         public async Task<IActionResult> ConfirmCreate([Bind("Id,Title,ReleaseDate,Genre,Platform,Developer,Multiplayer,Price")] VideoGame videoGame)
@@ -68,34 +69,15 @@ namespace MvcVideoGame.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Platform,Developer,Multiplayer,Price")] VideoGame videoGame)
+        public async Task<IActionResult> ConfirmEdit(int id, [Bind("Id,Title,ReleaseDate,Genre,Platform,Developer,Multiplayer,Price")] VideoGame videoGame)
         {
             if (id != videoGame.Id)
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(videoGame);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!VideoGameExists(videoGame.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(videoGame);
+            _context.Update(videoGame);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Delete(int? id)
