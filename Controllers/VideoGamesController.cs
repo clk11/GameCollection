@@ -14,13 +14,11 @@ namespace MvcVideoGame.Controllers
             _context = context;
         }
 
-        // GET: VideoGames
         public async Task<IActionResult> Index(int? pageNumber)
         {
             return View(await PaginatedList<VideoGame>.CreateAsync(_context.VideoGame.AsNoTracking(), pageNumber ?? 1, 4));
         }
 
-        // GET: VideoGames/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -28,7 +26,7 @@ namespace MvcVideoGame.Controllers
                 return NotFound();
             }
 
-            var videoGame = _context.VideoGame.Include(v => v.Reviews).FirstOrDefault(x=>x.Id == id);
+            var videoGame = _context.VideoGame.Include(v => v.Reviews).FirstOrDefault(x => x.Id == id);
             if (videoGame == null)
                 return NotFound();
             return View(videoGame);
@@ -43,18 +41,14 @@ namespace MvcVideoGame.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Details", new { id });
         }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Platform,Developer,Multiplayer,Price")] VideoGame videoGame)
+        public async Task<IActionResult> Create(){
+            return View();
+        }
+        public async Task<IActionResult> ConfirmCreate([Bind("Id,Title,ReleaseDate,Genre,Platform,Developer,Multiplayer,Price")] VideoGame videoGame)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(videoGame);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(videoGame);
+            _context.Add(videoGame);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Edit(int? id)
@@ -121,7 +115,6 @@ namespace MvcVideoGame.Controllers
             return View(videoGame);
         }
 
-        // POST: VideoGames/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
